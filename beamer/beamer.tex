@@ -1,0 +1,167 @@
+\documentclass[10pt,slidestop,mathserif]{beamer}
+%[slidestop] puts frame titles & contents on the top left corner (default = [slidescentered])
+%[red] changes navigation bars and title to reddish color
+%[mathserif] use serif fonts for representing formulas instead of sans serif (default = mathsans)
+%[notes] adds notes to PDF screen
+%[compress] the navigationbar in one line
+%[notesonly] make only notes
+%\mode<presentation>
+\usepackage{xeCJK}
+\usepackage{hyperref}
+%\usepackage{amsmath} %for math AMS fonts
+%\usepackage{graphicx} %to include figures
+%\usepackage{subfigure} %to have figures in figures
+%\usepackage{multimedia} %to include movies
+
+
+\input{config.tex}
+
+
+\begin{document}
+
+%\input{fixbug.tex}
+
+\title{Example}
+\subtitle{Beamer}
+\author{{\scriptsize\bfseries Yinyanghu} \\ {\scriptsize\bfseries 3.141...}}
+\institute{NJU}
+\subject{Computer Science}
+\date{\today}
+
+%\title[Crisis] % (optional, only for long titles)
+%{The Economics of Financial Crisis}
+%\subtitle{Evidence from India}
+%\author[Author, Anders] % (optional, for multiple authors)
+%{F.~Author\inst{1} \and S.~Anders\inst{2}}
+%\institute[Universitäten Hier und Dort] % (optional)
+%{
+%	\inst{1}%
+%	Institut für Informatik\\
+%	Universität Hier
+%	\and
+%	\inst{2}%
+%	Institut für theoretische Philosophie\\
+%	Universität Dort
+%}
+%\date[KPT 2004] % (optional)
+%{Konferenz über Präsentationstechniken, 2004}
+%\subject{Informatik}
+
+%[plain] for plane frame style
+%[containsverbatim] for using verbatim environment and \verb command
+%[allowframebreaks] for automatic split of frames if the contents do not fit in a single slide
+%[shrink] for shrinking the contents to fit in a single slide
+%[squeeze] for squeezing vertical space
+\begin{frame}[plain]
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\section{A}
+\subsection{A1}
+\begin{frame}[shrink]
+	\frametitle{A1}
+	\framesubtitle{test}
+
+	Erd\H os
+	\begin{block}{P}
+		\begin{itemize}
+			\item A %\pause
+			\item B %\pause
+			\item C %\pause
+		\end{itemize}
+	\end{block}
+
+	\footnote{On a fast machine.}
+\end{frame}
+
+\section{B}
+
+\subsection{B1}
+\begin{frame}
+	\frametitle{B1}
+	\begin{columns}[t]
+		\column{0.33\textwidth}
+		. . . contents A . . .
+		\column{0.33\textwidth}
+		. . . contents B . . .
+		\column{0.33\textwidth}
+		. . . contents C . . .
+	\end{columns}
+\end{frame}
+
+\subsection{B2}
+\begin{frame}
+	\frametitle{B2}
+	\label{th1}
+	\begin{theorem}
+		\begin{equation}
+			e^{i\pi} = -1
+		\end{equation}
+	\end{theorem}
+
+	\begin{proof}
+		\begin{equation}
+			A = B + C
+		\end{equation}
+	\end{proof}
+
+	\begin{example}
+		Write your fantastic \\
+	\end{example}
+
+	\begin{definition}
+		Write your fantastic \\
+	\end{definition}
+
+	%corollary, alertblock
+
+\end{frame}
+
+\section{C}
+\begin{frame}[containsverbatim]
+	\frametitle{C1}
+	\begin{verbatim}
+
+         F()
+A -----------------> B
+         G()
+	\end{verbatim}
+\end{frame}
+
+\begin{frame}
+	\frametitle{C2}
+	\hyperlink{th1}{\beamergotobutton{Jump to Theorem \#1}}
+	\hypertarget{th1}{help}
+\end{frame}
+
+\begin{frame}
+	\frametitle{C3}
+	\begin{itemize}
+		\item <+-| alert@+> Every thing
+		\item <+-| alert@+> that has
+		\item <+-| alert@+> beginning
+		\item <+-| alert@+> has end.
+	\end{itemize}
+
+	\begin{itemize}
+		\item<2-> \alt<2>{\color{blue}Everything}{\color{gray} Everything}
+		\item<2-> \alt<3>{\color{blue}that has}{\color{gray} that has}
+		\item<2-> \alt<4>{\color{blue}beginning}{\color{gray} beginning}
+		\item<2-> \alt<5>{\color{blue}has end.}{\color{gray} has end.}
+	\end{itemize}
+				
+			
+		
+	
+
+\end{frame}
+
+%Overlay
+%\pause
+%
+
+\end{document}
