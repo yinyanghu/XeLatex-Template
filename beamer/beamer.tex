@@ -5,13 +5,17 @@
 %[notes] adds notes to PDF screen
 %[compress] the navigationbar in one line
 %[notesonly] make only notes
+
 %\mode<presentation>
+%\mode<article>
+
 \usepackage{xeCJK}
 \usepackage{hyperref}
 %\usepackage{amsmath} %for math AMS fonts
 %\usepackage{graphicx} %to include figures
 %\usepackage{subfigure} %to have figures in figures
 %\usepackage{multimedia} %to include movies
+\usepackage{tikz} %to draw diagram
 
 
 \input{config.tex}
@@ -82,6 +86,7 @@
 
 \subsection{B1}
 \begin{frame}
+	\transdissolve
 	\frametitle{B1}
 	\begin{columns}[t]
 		\column{0.33\textwidth}
@@ -117,7 +122,7 @@
 		Write your fantastic \\
 	\end{definition}
 
-	%corollary, alertblock
+	%corollary, alertblock, fact, lemma
 
 \end{frame}
 
@@ -146,22 +151,149 @@ A -----------------> B
 		\item <+-| alert@+> beginning
 		\item <+-| alert@+> has end.
 	\end{itemize}
+\end{frame}
 
+\begin{frame}
+	\frametitle{C4}
 	\begin{itemize}
 		\item<2-> \alt<2>{\color{blue}Everything}{\color{gray} Everything}
 		\item<2-> \alt<3>{\color{blue}that has}{\color{gray} that has}
 		\item<2-> \alt<4>{\color{blue}beginning}{\color{gray} beginning}
 		\item<2-> \alt<5>{\color{blue}has end.}{\color{gray} has end.}
 	\end{itemize}
-				
-			
-		
-	
 
 \end{frame}
 
 %Overlay
 %\pause
 %
+
+\section{D}
+\begin{frame}
+	\frametitle{D1}
+	\begin{block}{Open Questions}
+		Is every even number the sum of two primes?
+		\cite{Goldbach1742}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{An Algorithm For Finding Primes Numbers.}
+	\begin{verbatim}
+	int main (void)
+	{
+		std::vector<bool> is_prime (100, true);
+		for (int i = 2; i < 100; i++)
+		if (is_prime[i])
+		{
+			std::cout << i << " ";
+			for (int j = i; j < 100; is_prime [j] = false, j+=i);
+		}
+		return 0;
+	}
+	\end{verbatim}
+	\begin{uncoverenv}<2>
+		Note the use of \verb|std::|.
+	\end{uncoverenv}
+\end{frame}
+
+%lecture in <article mode>
+%\lecture{Vector Spaces}{week 1}
+%\section{Introduction}
+%\begin{frame}
+%	\frametitle{AAA}
+%\end{frame}
+%\section{Summary}
+%\begin{frame}
+%	\frametitle{BBB}
+%\end{frame}
+%
+%\lecture{Scalar Products}{week 2}
+%\section{Introduction}
+%\begin{frame}
+%	\frametitle{AAA}
+%\end{frame}
+%\section{Summary}
+%\begin{frame}
+%	\frametitle{BBB}
+%\end{frame}
+
+\begin{frame}
+	\frametitle{BBB}
+	\begin{description}
+		\item[Lion] King of the savanna.
+		\item[Tiger] King of the jungle.
+	\end{description}
+	000\footnote[frame, 1]{Der Spiegel, 4/04, S.~90.}
+
+	\begin{beamercolorbox}{beamer color}
+		Text
+	\end{beamercolorbox}
+	AAA\footnote{Not proved.}
+
+	\begin{beamerboxesrounded}[upper=block head,lower=block body,shadow=true]{Theorem}
+		$A = B$.
+	\end{beamerboxesrounded}
+	BBB\footnote{On a fast machine.}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{CCC}
+	\begin{abstract}
+		Text
+	\end{abstract}
+
+	\begin{verse}
+		Text
+	\end{verse}
+
+	\begin{quotation}
+		Text
+	\end{quotation}
+
+	\begin{quote}
+		Text
+	\end{quote}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tikz}
+	\begin{figure}[h]
+		\begin{tikzpicture}
+		%color one half of a unit circle
+			\begin{scope}
+				\clip (0,0) circle (1cm);
+				\fill[black] (0cm,1cm) rectangle (-1cm, -1cm);
+			\end{scope}
+
+		%fill heads
+			\fill[black] (0,0.5) circle (0.5cm);
+			\fill[white] (0,-0.5) circle (0.5cm);
+
+		%fill eyes
+			\fill[white] (0,0.5) circle (0.1cm);
+			\fill[black] (0,-0.5) circle (0.1cm);
+
+		%outer line
+			\draw (0,0) circle (1cm);
+
+		\end{tikzpicture}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Deterministic Finite Automaton}
+\end{frame}
+
+\begin{thebibliography}{10}
+	\bibitem{Goldbach1742}[Goldbach, 1742]
+		Christian Goldbach.
+		\newblock A problem we should try to solve before the ISPN ’43 deadline,
+		\newblock \emph{Letter to Leonhard Euler}, 1742.
+\end{thebibliography}
 
 \end{document}

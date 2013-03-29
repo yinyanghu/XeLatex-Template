@@ -1,31 +1,31 @@
 # XeLatex-Template
 
-	XeLatex-Template is for the template of XeLatex.
+XeLatex-Template is for the template of XeLatex.
 
 ## Status
 
-1. Beamer
+### 1. Beamer
 
 * √ Basic Framework
 * √ Various Options
 * √ Some Overlays
-* More Feature
+* √ More Feature
 
-2. Article
+### 2. Article
 
-	ToDo
+* ToDo
 
-3. Book
+### 3. Book
 
-	ToDo
+* ToDo
 
-4. Report
+### 4. Report
 
-	ToDo
+* ToDo
 
-5. Letter
+### 5. Letter
 
-	ToDo
+* ToDo
 
 ***
 Yinyanghu, 2013
