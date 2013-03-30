@@ -17,11 +17,13 @@ XeLatex-Template is for the template of XeLatex.
 
 ### 3. Book
 
-* ToDo
+* √ Basic Framework
+* √ More Feature
 
 ### 4. Report
 
-* ToDo
+* √ Basic Framework
+* √ More Feature
 
 ### 5. Letter
 
