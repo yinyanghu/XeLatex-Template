@@ -9,21 +9,23 @@ XeLatex-Template is for the template of XeLatex.
 * √ Basic Framework
 * √ Various Options
 * √ Some Overlays
-* √ More Feature
+*   More Feature
 
 ### 2. Article
 
-* ToDo
+* √ Basic Framework
+* √ Chinese Support
+*   More Feature
 
 ### 3. Book
 
 * √ Basic Framework
-* √ More Feature
+*   More Feature
 
 ### 4. Report
 
 * √ Basic Framework
-* √ More Feature
+*   More Feature
 
 ### 5. Letter
 
